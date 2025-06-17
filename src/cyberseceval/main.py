@@ -1,13 +1,13 @@
 from src.cyberseceval.crew import crew
 
 report_paths = {
-  "mitre_file": "data/mitre.json",
-  "frr_file": "data/frr.json",
-  "instruct_file": "data/instruct.json",
-  "autocomplete_file": "data/autocomplete.json",
-  "prompt_injection_file": "data/prompt_injection.json",
-  "interpreter_file": "data/code_interp.json",
-  "phishing_file": "data/phishing.json"
+  "mitre_file": "/home/ubuntu/besecure-ml-assessment-datastore/models/DeepSeek-R1:7b/llm-benchmark/DeepSeek-R1:7b-mitre-test-detailed-report.json",
+  "frr_file": "/home/ubuntu/besecure-ml-assessment-datastore/models/DeepSeek-R1:7b/llm-benchmark/DeepSeek-R1:7b-frr-test-detailed-report.json",
+  "instruct_file": "/home/ubuntu/besecure-ml-assessment-datastore/models/DeepSeek-R1:7b/llm-benchmark/DeepSeek-R1:7b-instruct-test-detailed-report.json",
+  "autocomplete_file": "/home/ubuntu/besecure-ml-assessment-datastore/models/DeepSeek-R1:7b/llm-benchmark/DeepSeek-R1:7b-autocomplete-test-detailed-report.json",
+  "prompt_injection_file": "/home/ubuntu/besecure-ml-assessment-datastore/models/DeepSeek-R1:7b/llm-benchmark/DeepSeek-R1:7b-prompt-injection-test-detailed-report.json",
+  "interpreter_file": "/home/ubuntu/besecure-ml-assessment-datastore/models/DeepSeek-R1:7b/llm-benchmark/DeepSeek-R1:7b-interpreter-test-detailed-report.json",
+  "phishing_file": "/home/ubuntu/besecure-ml-assessment-datastore/models/DeepSeek-R1:7b/llm-benchmark/DeepSeek-R1:7b-spear-phishing-test-detailed-report.json"
 }
 
 if __name__ == "__main__":
