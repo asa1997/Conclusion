@@ -1,6 +1,7 @@
 from crewai import Crew, Process
-from src.cyberseceval.config.agents import agents
-from src.cyberseceval.config.tasks import tasks
+from cyberseceval.crew import crew
+from cyberseceval.config.agents import agents
+from cyberseceval.config.tasks import tasks
 
 crew = Crew(
   agents=list(agents.values()),
