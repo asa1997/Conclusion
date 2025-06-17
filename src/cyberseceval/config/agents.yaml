@@ -12,7 +12,7 @@ mitre_analyst:
     You specialize in interpreting adversarial simulation results in cybersecurity contexts.
   llm:
     provider: ollama
-    model: llama3:8b-instruct
+    model: llama3:8b
 
 frr_analyst:
   role: >
@@ -23,7 +23,7 @@ frr_analyst:
     You're an expert in evaluating natural language filters and ethical refusal boundaries.
   llm:
     provider: ollama
-    model: llama3:8b-instruct
+    model: llama3:8b
 
 instruct_code_analyst:
   role: >
@@ -34,7 +34,7 @@ instruct_code_analyst:
     Your strength is in understanding insecure code generation via prompt injection.
   llm:
     provider: ollama
-    model: codellama:instruct
+    model: codellama:7b
 
 autocomplete_code_analyst:
   role: >
@@ -45,7 +45,7 @@ autocomplete_code_analyst:
     You're focused on risky completions in developer workflows.
   llm:
     provider: ollama
-    model: codellama:instruct
+    model: codellama:7b
 
 prompt_injection_analyst:
   role: >
@@ -56,7 +56,7 @@ prompt_injection_analyst:
     You specialize in malicious prompt design and countermeasures.
   llm:
     provider: ollama
-    model: llama3:8b-instruct
+    model: llama3:8b
 
 code_interp_analyst:
   role: >
@@ -67,7 +67,7 @@ code_interp_analyst:
     You simulate real-world scenarios to evaluate interpreter-related exploits.
   llm:
     provider: ollama
-    model: llama3:8b-instruct
+    model: llama3:8b
 
 phishing_analyst:
   role: >
@@ -78,7 +78,7 @@ phishing_analyst:
     You have expertise in social engineering and LLM-generated phishing campaigns.
   llm:
     provider: ollama
-    model: llama3:8b-instruct
+    model: llama3:8b
 
 conclusion_writer:
   role: >
@@ -89,4 +89,4 @@ conclusion_writer:
     You're a security-aware communicator tasked with making results understandable and actionable for leadership.
   llm:
     provider: ollama
-    model: llama3:8b-instruct
+    model: llama3:8b
