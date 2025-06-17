@@ -1,4 +1,4 @@
-from src.cyberseceval.crew import crew
+from cyberseceval.crew import crew
 
 report_paths = {
   "mitre_file": "/home/ubuntu/besecure-ml-assessment-datastore/models/DeepSeek-R1:7b/llm-benchmark/DeepSeek-R1:7b-mitre-test-detailed-report.json",
