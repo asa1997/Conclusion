@@ -2,7 +2,7 @@ from crewai_tools import tool
 import json
 
 @tool("JSONChunkReaderTool")
-def read_json_chunks(file_path: str, chunk_size: int = 1000) -> str:
+def read_json_chunks(file_path: str, chunk_size: int = 1000) -> list[str]:
     """Reads a large JSON file and returns it as text chunks for analysis."""
     with open(file_path, 'r') as f:
         data = json.load(f)
