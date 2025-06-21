@@ -1,5 +1,10 @@
-from crewai_tools.tool import tool
+from pydantic import BaseModel
+from crewai.tools import tool
 import json
+
+class JSONChunkReaderToolInput(BaseModel):
+    file_path: str
+    chunk_size: int = 1000
 
 @tool("JSONChunkReaderTool")
 def read_json_chunks(file_path: str, chunk_size: int = 1000) -> str:
