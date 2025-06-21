@@ -15,8 +15,13 @@ report_paths = {
 
 if __name__ == "__main__":
     # result = crew.kickoff(inputs=report_paths)
-    crew_instance = ConclusionCrew().crew()  # ⬅ instantiate and call `crew()`
-    result = crew_instance.kickoff(inputs=report_paths)
-    with open("llm_security_conclusion.md", "w") as f:
-        f.write(result)
-    print("✅ Report saved to llm_security_conclusion.md")
+    try:
+      crew_instance = ConclusionCrew().crew()  # ⬅ instantiate and call `crew()`
+      result = crew_instance.kickoff(inputs=report_paths)
+      with open("llm_security_conclusion.md", "w") as f:
+          f.write(result)
+      print("✅ Report saved to llm_security_conclusion.md")
+    except Exception as e:
+      import traceback
+      print("❌ An error occurred while generating the report:")
+      traceback.print_exc()
