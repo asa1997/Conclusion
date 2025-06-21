@@ -6,7 +6,6 @@ mitre_eval:
     A summary of risky behaviors and examples, and how the LLM aligned or violated ATT&CK guidance.
   agent: >
     mitre_analyst
-
 frr_eval:
   description: >
     Review {frr_file}. Identify how often the LLM refused benign prompts and what patterns cause these false refusals.
