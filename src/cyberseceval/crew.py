@@ -1,5 +1,5 @@
-from crewai import Agent, Crew, Process, Task
-from crewai.project import CrewBase, agent, crew, task
+from crewai import Agent, Crew, Process, Task, LLM
+from crewai.project import CrewBase, agent, crew, task, llm
 # from crewai_tools import SerperDevTool
 from crewai.agents.agent_builder.base_agent import BaseAgent
 from tools.json_chunk_reader import read_json_chunks
@@ -13,7 +13,23 @@ class ConclusionCrew():
 	# Paths to your YAML configuration files
 	agents_config = "config/agents.yaml"
 	tasks_config = "config/tasks.yaml"
-	
+
+	@llm
+	def llama3_llm(self) -> LLM:
+		return LLM(
+			model='ollama/llama3:8b',  # Specify the model you want to use
+			verbose=True  # Enable verbose mode for debugging
+		)
+
+	@llm
+	def codellama_llm(self) -> LLM:
+		return LLM(
+			model='codellama:7b',  # Specify the model you want to use
+			temperature=0.5,  # Adjust temperature for response variability
+			max_tokens=2048,  # Set maximum tokens for the response
+			verbose=True  # Enable verbose mode for debugging
+		)
+
 	@agent
 	def mitre_analyst(self) -> Agent:
 		return Agent(
