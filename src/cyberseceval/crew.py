@@ -19,7 +19,8 @@ class ConclusionCrew():
 		return LLM(
 			model='ollama/llama3:8b',  # Specify the model you want to use
 			base_url="http://localhost:11434",
-			verbose=True  # Enable verbose mode for debugging
+			verbose=True,  # Enable verbose mode for debugging
+			steam=False
 		)
 
 	@llm
