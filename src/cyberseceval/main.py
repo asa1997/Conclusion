@@ -1,7 +1,7 @@
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-from cyberseceval.crew import crew
+from cyberseceval.crew import ConclusionCrew
 
 report_paths = {
   "mitre_file": "/home/ubuntu/besecure-ml-assessment-datastore/models/DeepSeek-R1:7b/llm-benchmark/DeepSeek-R1:7b-mitre-test-detailed-report.json",
@@ -14,7 +14,9 @@ report_paths = {
 }
 
 if __name__ == "__main__":
-    result = crew.kickoff(inputs=report_paths)
+    # result = crew.kickoff(inputs=report_paths)
+    crew_instance = ConclusionCrew().crew()  # ⬅ instantiate and call `crew()`
+    result = crew_instance.kickoff(inputs=report_paths)
     with open("llm_security_conclusion.md", "w") as f:
         f.write(result)
     print("✅ Report saved to llm_security_conclusion.md")
