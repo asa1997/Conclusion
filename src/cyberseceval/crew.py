@@ -17,7 +17,7 @@ class ConclusionCrew():
 	@llm
 	def llama3_llm(self) -> LLM:
 		return LLM(
-			model='ollama/llama3:8b',  # Specify the model you want to use
+			model='ollama/llama3.2:latest',  # Specify the model you want to use
 			base_url="http://localhost:11434",
 			verbose=True,  # Enable verbose mode for debugging
 			steam=False
