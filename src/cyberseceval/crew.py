@@ -18,6 +18,7 @@ class ConclusionCrew():
 	def llama3_llm(self) -> LLM:
 		return LLM(
 			model='ollama/llama3:8b',  # Specify the model you want to use
+			base_url="http://localhost:11434",
 			verbose=True  # Enable verbose mode for debugging
 		)
 
@@ -25,8 +26,9 @@ class ConclusionCrew():
 	def codellama_llm(self) -> LLM:
 		return LLM(
 			model='codellama:7b',  # Specify the model you want to use
-			temperature=0.5,  # Adjust temperature for response variability
-			max_tokens=2048,  # Set maximum tokens for the response
+			base_url="http://localhost:11434",
+			# temperature=0.5,  # Adjust temperature for response variability
+			# max_tokens=2048,  # Set maximum tokens for the response
 			verbose=True  # Enable verbose mode for debugging
 		)
 
