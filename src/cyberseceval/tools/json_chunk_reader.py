@@ -1,4 +1,4 @@
-from crewai_tools.tool import tool
+from crewai.tools import tool
 import json
 
 @tool("JSONChunkReaderTool")
